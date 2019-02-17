@@ -1,0 +1,18 @@
+<% if flash[:notice] %>
+     <p id="notice"><%=flash[:notice] %></p>
+     <% end %>
+
+
+
+<p>Title:<%= @book.title %></p>
+
+<p>body:<%= @book.body %></p>
+
+
+
+<%=link_to "Edit", edit_book_path(@book), class: "edit_#{@book.id}" %>
+<!-- #controllerにbookの指定がないので@bookになる。 -->
+|
+<%=link_to "Back", books_path, class: "back" %>
+
+
